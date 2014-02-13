@@ -9,13 +9,13 @@ using namespace std;
 class person
 {
 public:
-	person(string name, const int iq);
+	person(string name, int iq);
 	person();
 	~person(void);
 
 	//accessors
 	string getName();
-	float getIq();
+	int getIq();
 
 	//mutators
 	void setName(string a);

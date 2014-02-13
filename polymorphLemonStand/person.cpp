@@ -4,10 +4,10 @@
 person::person()
 {
 }
-person::person(string name, const int iq)
+person::person(string name, int iq)
 {
-	setName(name);
-	setIq(iq);
+	m_name = name;
+	m_iq = iq;
 }
 
 //destructor
@@ -15,7 +15,7 @@ person::~person(void) { }
 
 //accessors
 string person::getName() { return m_name; }
-float person::getIq() { return m_iq; }
+int person::getIq() { return m_iq; }
 
 //mutators
 void person::setIq(int iq) { m_iq = iq; }
