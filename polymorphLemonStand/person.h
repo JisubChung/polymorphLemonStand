@@ -9,9 +9,15 @@ using namespace std;
 class person
 {
 public:
+	//constructors
 	person(string name, int iq);
 	person();
-	~person(void);
+
+	//destructor
+	virtual ~person(void);
+
+	//functions
+	virtual int listSmarts()=0;
 
 	//accessors
 	string getName();

@@ -6,9 +6,15 @@ class student :
 	public person
 {
 public:
+	//constructors
 	student(void);
 	student(string name, int iq, const double &gpa);
-	~student(void);
+	
+	//destructors
+	virtual ~student(void);
+
+	//functions
+	virtual int listSmarts();
 
 	//accessor
 	double getGpa();
