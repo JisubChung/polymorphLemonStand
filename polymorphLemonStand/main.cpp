@@ -27,22 +27,25 @@ int main()
 {
 	student s("Smart Sam", 100, 4.00);
 	student t("Dumb Dom", 100, 2.00);
-//	new professor p("Prof Jon", 100, 5);
 	professor r("Prof Kal", 100, 2);
+	professor * p;
+	p = new professor("Prof Jon", 100, 5);
 
 	lemonaideStand (s);
 	lemonaideStand (t);
-	//lemonaideStand (p); //figure out why this doesnt work
+	lemonaideStand (*p);
 	lemonaideStand (r);
 
 	cout << s.listSmarts();
 	cout << endl << endl;
 	cout << t.listSmarts();
 	cout << endl << endl;
-	//p.listSmarts();		//figure out why this doesnt work
-	//cout << endl << endl;	//figure out why this doesnt work
+	cout << p->listSmarts();
+	cout << endl << endl;
 	cout << r.listSmarts();
 	cout << endl << endl;
+
+	delete p;
 	
 	//Following is to stall the program from closing
 	int x;
